@@ -1,0 +1,79 @@
+/* CSS Estils Generals */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-image: url('../img/fondo.avif');
+    color: #222;
+  }
+
+  header {
+    background-color: #000000;
+    color: white;
+    padding: 1em;
+  }
+  
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  
+  .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 1em;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .nav-links a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+  }
+
+  main {
+    padding: 2em;
+    max-width: 800px;
+    margin: auto;
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.1);
+  }
+  
+  h1, h2 {
+    color: #222;
+    border-bottom: 2px solid #ddd;
+    padding-bottom: 0.3em;
+    margin-top: 1.5em;
+  }
+  
+  ul {
+    list-style-type: square;
+    padding-left: 1.5em;
+  }
+  
+  iframe {
+    border: none;
+    border-radius: 8px;
+    width: 100%;
+    height: 400px;
+  }
+  
+  /* Responsive per mòbils */
+  @media (max-width: 768px) {
+    nav {
+      flex-direction: row;
+      justify-content: space-between;
+    }
+  
+    nav a {
+      font-size: 1.2em;
+      padding: 0.3em;
+    }
+  
+    main {
+      padding: 1em;
+    }
+  }

@@ -1,36 +1,41 @@
 /* CSS Estils Generals */
 body {
-    margin: 0;
     font-family: Arial, sans-serif;
     background-image: url('../img/fondo.avif');
     color: #222;
   }
 
-  header {
-    background-color: #000000;
+  footer {
+    background-color: #000;
     color: white;
-    padding: 1em;
-  }
-  
-  nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    flex-wrap: wrap;
+    padding: 10px 20px;
+    width: 100%;
   }
   
-  .nav-links {
-    list-style: none;
+  .left-icons, .right-icons {
     display: flex;
-    gap: 1em;
-    padding: 0;
-    margin: 0;
+    align-items: center;
   }
   
-  .nav-links a {
+  .right-icons {
+    gap: 30px;
+  }
+  
+  .left-icons i, .right-icons i {
+    font-size: 1.5rem;
     color: white;
+  }
+  
+  footer a {
     text-decoration: none;
-    font-weight: bold;
+    color: inherit;
+  }
+  
+  footer a:hover {
+    color: #ccc;
   }
 
   main {
@@ -61,8 +66,17 @@ body {
     height: 400px;
   }
   
+ .hola {
+    text-align: center;
+    padding: 1em;
+    background-color: #000000;
+    color: white;
+    bottom: 0;
+    width: 100%;
+  }
+
   /* Responsive per mòbils */
-  @media (max-width: 768px) {
+  @media (max-width: 500px) {
     nav {
       flex-direction: row;
       justify-content: space-between;
@@ -75,5 +89,19 @@ body {
   
     main {
       padding: 1em;
+    }
+
+    footer {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+      
+      .left-icons, .right-icons {
+        gap: 20px;
+        flex-direction: row;
+    }
+      
+      .left-icons {
+        margin-right: 10px;
     }
   }

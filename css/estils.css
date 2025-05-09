@@ -189,7 +189,11 @@ body {
     }
       
       .left-icons {
-        margin-right: 15px;
+        margin-right: 20px;
+    }
+    
+      .right-icons {
+        margin-right: 20px;
     }
 
     /* Los contenedores pasan a columna en móvil */

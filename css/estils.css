@@ -1,52 +1,72 @@
 /* CSS Estils Generals */
+/* Elimina el scroll horizontal en toda la página */
+body, html {
+  overflow-x: hidden;
+}
+/* Estilos generales del body: fuente, fondo, color y márgenes */
 body {
     font-family: Arial, sans-serif;
     background-image: url('../img/fondo.avif');
     color: #222;
+    margin-right: 0;
+    margin-left: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding: 0;
   }
 
-  footer {
+  /* Estilos para el header: fondo negro, texto blanco, distribución y espaciado */
+  header {
     background-color: #000;
     color: white;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px 20px;
+    padding: 10px;
     width: 100%;
+    margin-right: 0;
   }
   
+  /* Contenedores de iconos en el header */
   .left-icons, .right-icons {
     display: flex;
     align-items: center;
   }
   
+  /* Espaciado entre iconos de la derecha */
   .right-icons {
     gap: 30px;
+    margin-right: 2%; 
   }
   
+  /* Tamaño y color de los iconos */
   .left-icons i, .right-icons i {
-    font-size: 1.5rem;
+    font-size: 2rem;
     color: white;
   }
   
-  footer a {
+  /* Quita subrayado y mantiene color en los enlaces del header */
+  header a {
     text-decoration: none;
     color: inherit;
   }
   
-  footer a:hover {
+  /* Cambia color de iconos al pasar el ratón */
+  header a:hover {
     color: #ccc;
   }
 
+  /* Estilos para el main: padding, ancho máximo, centrado, fondo blanco, bordes redondeados y sombra */
   main {
     padding: 2em;
     max-width: 800px;
-    margin: auto;
+    margin: 0 auto;
     background-color: white;
     border-radius: 12px;
     box-shadow: 0 0 20px rgba(0,0,0,0.1);
   }
   
+  /* Estilos para títulos */
   h1, h2 {
     color: #222;
     border-bottom: 2px solid #ddd;
@@ -54,11 +74,13 @@ body {
     margin-top: 1.5em;
   }
   
+  /* Estilos para listas */
   ul {
     list-style-type: square;
     padding-left: 1.5em;
   }
   
+  /* Estilos para iframes (mapas) */
   iframe {
     border: none;
     border-radius: 8px;
@@ -66,17 +88,19 @@ body {
     height: 400px;
   }
   
- .hola {
+  /* Estilos para el pie de página */
+  footer {
     text-align: center;
     padding: 1em;
     background-color: #000000;
     color: white;
-    bottom: 0;
     width: 100%;
+    height: 100%;
   }
 
   /* Responsive per mòbils */
   @media (max-width: 500px) {
+    /* Ajusta la navegación para móviles */
     nav {
       flex-direction: row;
       justify-content: space-between;
@@ -91,7 +115,8 @@ body {
       padding: 1em;
     }
 
-    footer {
+    /* Ajusta el header y los iconos para móviles */
+    header {
         justify-content: center;
         flex-wrap: wrap;
     }

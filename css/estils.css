@@ -5,9 +5,9 @@ body, html {
 }
 /* Estilos generales del body: fuente, fondo, color y márgenes */
 body {
-    font-family: Arial, sans-serif;
-    background-image: url('../img/fondo.avif');
-    color: #222;
+    font-family: Arial, sans-serif; /* Fuente principal */
+    background-image: url('../img/fondo.avif'); /* Imagen de fondo */
+    color: #222; /* Color de texto principal */
     margin-right: 0;
     margin-left: 0;
     margin-top: 0;
@@ -17,11 +17,11 @@ body {
 
   /* Estilos para el header: fondo negro, texto blanco, distribución y espaciado */
   header {
-    background-color: #000;
-    color: white;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    background-color: #000; /* Fondo negro */
+    color: white; /* Texto blanco */
+    display: flex; /* Flexbox para distribución */
+    justify-content: space-between; /* Espacio entre los extremos */
+    align-items: center; /* Centrado vertical */
     padding: 10px;
     width: 100%;
     margin-right: 0;
@@ -64,6 +64,7 @@ body {
     background-color: white;
     border-radius: 12px;
     box-shadow: 0 0 20px rgba(0,0,0,0.1);
+    text-align: justify; /* Justifica el texto */
   }
   
   /* Estilos para títulos */
@@ -80,12 +81,73 @@ body {
     padding-left: 1.5em;
   }
   
-  /* Estilos para iframes (mapas) */
+  /* Estilos para iframes (mapas y vídeos) */
   iframe {
     border: none;
     border-radius: 8px;
     width: 100%;
     height: 400px;
+  }
+  
+  /* Contenedor del perfil: imagen y texto alineados */
+  .perfil-contenedor {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    margin-bottom: 30px;
+  }
+  
+  /* Imagen de perfil: tamaño y forma circular */
+  .imagen-perfil {
+    width: 250px;
+    height: auto;
+    border-radius: 50%; /* Hace la imagen redonda */
+  }
+  
+  /* El texto del perfil ocupa el espacio restante */
+  .perfil-contenedor p {
+    flex: 1;
+  }
+  
+  /* Contenedor de experiencia: imagen y texto alineados */
+  .experiencia-contenedor {
+    display: flex;
+    align-items: center; /* Alineación vertical */
+    justify-content: space-between;
+    gap: 20px; /* Espacio entre imagen y texto */
+  }
+  
+  /* Imagen de experiencia: tamaño ajustado */
+  .imagen-experiencia {
+    width: 250px; /* Ajusta el tamaño según tu diseño */
+    height: auto;
+  }
+  
+  /* El texto de experiencia ocupa el espacio restante */
+  .experiencia-contenedor p {
+    flex: 1; /* Para que el texto ocupe el espacio restante */
+  }
+  
+  /* Contenedor de estudios: imagen y texto alineados */
+  .estudios-contenedor {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    margin-bottom: 30px;
+    text-align: justify; /* Justifica el texto */
+  }
+  
+  /* Imagen de estudios: tamaño ajustado */
+  .imagen-estudios {
+    width: 300px;
+    height: auto;
+  }
+  
+  /* El texto de estudios ocupa el espacio restante */
+  .estudios-contenedor p {
+    flex: 1;
   }
   
   /* Estilos para el pie de página */
@@ -98,7 +160,7 @@ body {
     height: 100%;
   }
 
-  /* Responsive per mòbils */
+  /* Responsive para móviles */
   @media (max-width: 500px) {
     /* Ajusta la navegación para móviles */
     nav {
@@ -128,5 +190,31 @@ body {
       
       .left-icons {
         margin-right: 10px;
+    }
+
+    /* Los contenedores pasan a columna en móvil */
+    .perfil-contenedor,
+    .experiencia-contenedor,
+    .estudios-contenedor {
+      flex-direction: column;
+      text-align: justify;
+    }
+  
+    /* Las imágenes ocupan todo el ancho en móvil */
+    .imagen-perfil,
+    .imagen-experiencia,
+    .imagen-estudios {
+      width: 100%;       /* Que ocupen todo el ancho */
+      max-width: 300px;  /* Tamaño máximo razonable */
+      border-radius: 10px;
+      image-orientation: center; /* Centra la imagen */
+      height: auto; /* Altura fija para mantener proporciones */
+    }
+  
+    /* El texto ocupa todo el ancho en móvil */
+    .perfil-contenedor p,
+    .experiencia-contenedor p,
+    .estudios-contenedor p {
+      width: 100%;
     }
   }
